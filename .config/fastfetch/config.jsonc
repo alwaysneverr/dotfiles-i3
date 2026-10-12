@@ -1,0 +1,76 @@
+{
+  "$schema": "https://github.com",
+  "logo": {
+    "type": "auto",
+    "color": {
+      "1": "#d62828",
+      "2": "#f4a261"
+    }
+  },
+  "display": {
+    "separator": " ☯  ",
+    "color": {
+      "keys": "red",
+      "title": "yellow"
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "color": {
+        "user": "33", // Gold/Yellow
+        "at": "37",   // Cream White
+        "host": "31"  // Crimson Red
+      }
+    },
+    "separator",
+    {
+      "type": "os",
+      "key": "Sentinel ",
+      "keyColor": "31" // Crimson Red
+    },
+    {
+      "type": "kernel",
+      "key": "Xuanfang ",
+      "keyColor": "33" // Gold
+    },
+    {
+      "type": "uptime",
+      "key": "Lifespan",
+      "keyColor": "37" // White
+    },
+    {
+      "type": "packages",
+      "key": "Resonators",
+      "keyColor": "31" // Crimson Red
+    },
+    {
+      "type": "shell",
+      "key": "Interface",
+      "keyColor": "33" // Gold
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal ",
+      "keyColor": "37" // White
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": "CPU",
+      "keyColor": "31" // Crimson Red
+    },
+    {
+      "type": "gpu",
+      "key": "GPU",
+      "keyColor": "33" // Gold
+    },
+    {
+      "type": "memory",
+      "key": "Memory",
+      "keyColor": "37" // White
+    },
+    "break",
+    "colors"
+  ]
+}

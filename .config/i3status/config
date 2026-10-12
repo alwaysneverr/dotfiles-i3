@@ -1,0 +1,53 @@
+# =============================================================================
+# i3status CONFIGURATION FILE
+# =============================================================================
+
+general {
+        colors = true
+        interval = 5
+        
+        # --- Custom Color Palette (Matching your i3 Config) ---
+        color_good      = "#eedec8"  # $text-std (Normal/Healthy output)
+        color_degraded  = "#ecc857"  # $gold (Warning thresholds)
+        color_bad       = "#d02a3a"  # $urgent (Critical states / Down interfaces)
+}
+
+# --- Module Execution Order Matrix ---
+order += "wireless _first_"
+order += "battery all"
+order += "memory"
+order += "tztime local"
+
+# =============================================================================
+# MODULE CONFIGURATIONS
+# =============================================================================
+
+# --- Wireless Network Block ---
+wireless _first_ {
+        format_up = " Wi-Fi: %essid (%quality)"
+        format_down = " Wi-Fi: Down"
+}
+
+# --- ThinkPad Battery Monitor ---
+battery all {
+        format = " %status %percentage %remaining"
+        format_down = " No Battery"
+        status_chr = "⚡ CHG"
+        status_bat = "🔋 BAT"
+        status_unk = "❓ UNK"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 15
+}
+
+# --- Optimized Core Total RAM Calculation ---
+memory {
+        format = " RAM: %used / %total"
+        threshold_degraded = "2G"
+        format_degraded = " MEMORY LOW: %available"
+}
+
+# --- Clean, Minimal Date & Time Formatting ---
+tztime local {
+        format = " %Y-%m-%d │ %I:%M %p "
+}
