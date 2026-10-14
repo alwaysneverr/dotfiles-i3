@@ -6,8 +6,12 @@
 set $mod Mod4
 floating_modifier $mod
 tiling_drag modifier titlebar
-font pango:monospace 8
-default_border pixel 1
+font pango:JetBrains Mono 10
+default_border pixel 3
+default_floating_border pixel 3
+
+gaps inner 10
+gaps outer 5
 
 # --- Custom Color Palette ---
 set $bg-dark    #1e1416
@@ -30,7 +34,7 @@ client.urgent           $urgent         $urgent         $text-std       $urgent 
 
 set $ws1 "1"
 set $ws2 "2"
-set $ws3 "3: Chat"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
