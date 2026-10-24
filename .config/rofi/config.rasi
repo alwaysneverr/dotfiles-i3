@@ -1,0 +1,90 @@
+configuration {
+    modi: "run,drun";
+    icon-theme: "gnome";
+    show-icons: false;
+    terminal: "kitty";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: " 🚀 Apps ";
+    display-run: " 🤖 Run ";
+    display-window: " 🪟 Window ";
+}
+
+* {
+    bg-dark:     #1e1416;
+    bg-light:    #362225;
+    text-std:    #eedec8;
+    accent:      #e03e3e;
+    
+    background-color:   transparent;
+    text-color:         @text-std;
+}
+
+window {
+    width:            550px;
+    x-offset:         0px;
+    y-offset:         0px;
+    background-color: @bg-dark;
+    border:           1px;
+    border-color:     @accent;
+    border-radius:    0px;
+    padding:          15px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg-light;
+    children:         [ prompt, entry ];
+    padding:          6px;
+    margin:           0px 0px 10px 0px;
+}
+
+prompt {
+    background-color: @accent;
+    text-color:       @bg-dark;
+    padding:          4px 8px;
+}
+
+entry {
+    padding:          4px;
+    text-color:       @text-std;
+    placeholder:      "Search...";
+    placeholder-color: #586070;
+}
+
+listview {
+    lines:        8;
+    columns:      1;
+    fixed-height: true;
+    cycle:        true;
+    scrollbar:    false;
+}
+
+element {
+    padding: 6px;
+    spacing: 4px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @text-std;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:       @bg-dark;
+}
+
+element-text selected {
+    text-color:	      @bg-dark;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @text-std;
+}
