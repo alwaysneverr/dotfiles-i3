@@ -12,6 +12,7 @@ default_floating_border pixel 3
 
 gaps inner 10
 gaps outer 5
+gaps top 40
 
 # --- Custom Color Palette ---
 set $bg-dark    #1e1416
@@ -170,21 +171,23 @@ bindsym $mod+r mode "resize"
 # STATUS BAR
 # =============================================================================
 
-bar {
-        status_command i3status -c ~/.config/i3status/config
-        position bottom
-        colors {
-                background      $bg-dark
-                statusline      $text-std
-                separator       $bg-light
-                
-                #                       border          background      text
-                focused_workspace       $accent         $accent         $bg-dark
-                active_workspace        $bg-light       $bg-light       $text-std
-                inactive_workspace      $bg-dark        $bg-dark        $text-std
-                urgent_workspace        $urgent         $urgent         $text-std
-        }
-}
+#bar {
+#        status_command i3status -c ~/.config/i3status/config
+#        position bottom
+#        colors {
+#                background      $bg-dark
+#                statusline      $text-std
+#                separator       $bg-light
+#                
+#                #                       border          background      text
+#                focused_workspace       $accent         $accent         $bg-dark
+#                active_workspace        $bg-light       $bg-light       $text-std
+#                inactive_workspace      $bg-dark        $bg-dark        $text-std
+#                urgent_workspace        $urgent         $urgent         $text-std
+#        }
+#}
+
+exec_always --no-startup-id killall -q polybar; polybar top
 
 # =============================================================================
 # AUTOSTART APPLICATIONS (DAEMONS & UTILITIES)
