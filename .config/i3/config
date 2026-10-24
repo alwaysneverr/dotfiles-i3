@@ -11,8 +11,6 @@ default_border pixel 3
 default_floating_border pixel 3
 
 gaps inner 10
-gaps outer 5
-gaps top 40
 
 # --- Custom Color Palette ---
 set $bg-dark    #1e1416
