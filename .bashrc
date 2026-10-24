@@ -26,5 +26,6 @@ alias mem='free -h'
 alias jc='journalctl -p 3 -xb'
 alias ping-test='ping -c 4 1.1.1.1'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias fastfetch='clear && fastfetch'
 
 PS1='\[\033[38;2;236;197;135m\]\u\[\033[0m\]@\[\033[38;2;224;62;62m\]\h\[\033[0m\]:\[\033[38;2;238;222;200m\]\w\[\033[0m\]\$ '
